@@ -1,0 +1,29 @@
+.about{
+
+padding:100px 10%;
+
+text-align:center;
+
+}
+
+.about h2{
+
+font-size:2.5rem;
+
+margin-bottom:25px;
+
+color:#D4AF37;
+
+}
+
+.about p{
+
+max-width:850px;
+
+margin:auto;
+
+line-height:2;
+
+color:#cfcfcf;
+
+}
