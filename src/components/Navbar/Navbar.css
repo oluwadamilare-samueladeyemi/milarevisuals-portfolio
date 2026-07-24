@@ -34,3 +34,19 @@ nav a.active {
   width: auto;
   display: block;
 }
+
+.navbar.dark {
+  background: #151518;
+}
+
+.navbar.light {
+  background: #ffffff;
+}
+
+.navbar.light a {
+  color: #222;
+}
+
+.navbar.dark a {
+  color: #ffffff;
+}
