@@ -28,3 +28,9 @@ nav a:hover {
 nav a.active {
   color: #d4af37;
 }
+
+.logo img {
+  height: 70px;
+  width: auto;
+  display: block;
+}

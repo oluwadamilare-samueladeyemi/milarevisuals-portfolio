@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../../assets/images/milare-visuals-brand-logo.png";
 
 function Navbar() {
   return (
     <header className="navbar">
       <div className="logo">
-        <h2>Milare Visuals</h2>
+        <img src={logo} alt="Milare Visuals Logo" />
       </div>
 
       <nav>
