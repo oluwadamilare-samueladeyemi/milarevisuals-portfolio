@@ -1,4 +1,5 @@
 import "./Timeline.css";
+import { useEffect } from "react";
 
 const timelineData = [
   {
@@ -17,7 +18,7 @@ const timelineData = [
     year: "2023",
     title: "Expanded Services",
     description:
-      "Added videography, documentaries, and content creation services.",
+      "Added videography, documentaries and content creation services.",
   },
   {
     year: "2024",
@@ -29,25 +30,54 @@ const timelineData = [
     year: "2025",
     title: "Professional Media Brand",
     description:
-      "Offering complete media coverage for individuals, businesses, and organizations.",
+      "Providing complete media coverage for individuals, businesses and organizations.",
   },
 ];
 
 function Timeline() {
+  useEffect(() => {
+    const items = document.querySelectorAll(".timeline-card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="timeline">
-      <h2>My Journey</h2>
+    <section className="timeline-section">
+      <h2 className="timeline-title">My Journey</h2>
 
-      {timelineData.map((item) => (
-        <div className="timeline-item" key={item.year}>
-          <div className="year">{item.year}</div>
+      <div className="timeline">
+        {timelineData.map((item, index) => (
+          <div
+            key={item.year}
+            className={`timeline-card ${
+              index % 2 === 0 ? "left" : "right"
+            }`}
+          >
+            <div className="timeline-content">
+              <span className="year">{item.year}</span>
 
-          <div className="content">
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+              <h3>{item.title}</h3>
+
+              <p>{item.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }
