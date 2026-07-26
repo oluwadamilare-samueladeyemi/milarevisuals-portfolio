@@ -1,0 +1,32 @@
+.project-details {
+  width: min(900px, 90%);
+  margin: 40px auto;
+}
+
+.project-details h1 {
+  margin-bottom: 20px;
+}
+
+.project-details p {
+  margin: 16px 0;
+  line-height: 1.7;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.project-details a:last-child {
+  display: inline-block;
+  margin-top: 25px;
+  background: #d4af37;
+  color: #111;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}

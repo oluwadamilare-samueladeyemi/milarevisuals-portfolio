@@ -1,14 +1,30 @@
+import { useState } from "react";
+
 import useFetch from "../hooks/useFetch";
+
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage/ErrorMessage";
+import SearchBar from "../components/SearchBar/SearchBar";
+import ProjectCard from "../components/ProjectCard/ProjectCard";
+import "../styles/Projects.css";
 
 function Projects() {
+  const [searchQuery, setSearchQuery] = useState("");
+
   const {
     data: projects,
     isLoading,
     error,
   } = useFetch(
     "https://api.github.com/users/oluwadamilare-samueladeyemi/repos"
+  );
+
+  function handleSearch(event) {
+    setSearchQuery(event.target.value);
+  }
+
+  const filteredProjects = projects.filter((project) =>
+    project.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   if (isLoading) {
@@ -20,20 +36,22 @@ function Projects() {
   }
 
   return (
-    <main style={{ padding: "40px" }}>
-      <h1>GitHub Projects</h1>
+    <main className="projects-page">
+      <h1>My Projects</h1>
 
-      <p>Total repositories: {projects.length}</p>
+      <SearchBar
+        searchQuery={searchQuery}
+        handleSearch={handleSearch}
+      />
 
-      {projects.map((project) => (
-        <div key={project.id}>
-          <h3>{project.name}</h3>
-
-          <p>{project.description || "No description provided."}</p>
-
-          <hr />
-        </div>
-      ))}
+      <div className="projects-grid">
+        {filteredProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+          />
+        ))}
+      </div>
     </main>
   );
 }
