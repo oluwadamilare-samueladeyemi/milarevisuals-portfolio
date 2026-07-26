@@ -1,10 +1,20 @@
 import "./SkillCard.css";
 
-function SkillCard({ skill }) {
+function SkillCard({ icon, title, skills }) {
   return (
-    <div className="skill-card">
-      <h3>{skill}</h3>
-    </div>
+    <article className="skill-card">
+      <div className="skill-header">
+        <span className="skill-icon">{icon}</span>
+
+        <h3>{title}</h3>
+      </div>
+
+      <ul className="skill-list">
+        {skills.map((skill) => (
+          <li key={skill}>✓ {skill}</li>
+        ))}
+      </ul>
+    </article>
   );
 }
 

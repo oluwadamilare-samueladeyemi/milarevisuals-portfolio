@@ -3,21 +3,54 @@ import SkillCard from "../components/SkillCard/SkillCard";
 
 import "../styles/Experience.css";
 
-const skills = [
-  "React",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "Photography",
-  "Videography",
-  "Adobe Lightroom",
-  "Adobe Photoshop",
-  "Adobe Premiere Pro",
-  "Canva",
-  "CapCut",
-  "Video Editing",
-  "Camera Operation",
-  "Responsive Design",
+const skillCategories = [
+  {
+    title: "Media Production",
+    icon: "📷",
+    skills: [
+      "Photography",
+      "Videography",
+      "Documentary Production",
+      "Content Creation",
+      "Camera Operation",
+    ],
+  },
+
+  {
+    title: "Frontend Development",
+    icon: "💻",
+    skills: [
+      "React",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Responsive Design",
+    ],
+  },
+
+  {
+    title: "Creative Software",
+    icon: "🎨",
+    skills: [
+      "Adobe Lightroom",
+      "Adobe Photoshop",
+      "Adobe Premiere Pro",
+      "Canva",
+      "CapCut",
+    ],
+  },
+
+  {
+    title: "Professional Skills",
+    icon: "🤝",
+    skills: [
+      "Creative Problem Solving",
+      "Client Communication",
+      "Project Planning",
+      "Time Management",
+      "Team Collaboration",
+    ],
+  },
 ];
 
 function Experience() {
@@ -27,19 +60,24 @@ function Experience() {
         <h1>Experience & Skills</h1>
 
         <p>
-          My journey as a media professional and frontend developer, combining
-          creativity with modern web technologies.
+          A combination of creative media production and modern frontend
+          development skills used to deliver high-quality digital experiences.
         </p>
       </section>
 
       <Timeline />
 
       <section className="skills-section">
-        <h2>Skills</h2>
+        <h2>Professional Skills</h2>
 
         <div className="skills-grid">
-          {skills.map((skill) => (
-            <SkillCard key={skill} skill={skill} />
+          {skillCategories.map((category) => (
+            <SkillCard
+              key={category.title}
+              icon={category.icon}
+              title={category.title}
+              skills={category.skills}
+            />
           ))}
         </div>
       </section>
