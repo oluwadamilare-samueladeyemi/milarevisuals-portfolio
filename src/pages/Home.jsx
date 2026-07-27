@@ -1,6 +1,5 @@
 import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
-import Services from "../components/Services/Services";
 import Stats from "../components/Stats/Stats";
 import FeaturedProjects from "../components/FeaturedProjects/FeaturedProjects";
 import Testimonials from "../components/Testimonials/Testimonials";
@@ -11,7 +10,6 @@ function Home() {
     <>
       <Hero />
       <About />
-      <Services />
       <Stats />
       <FeaturedProjects />
       <Testimonials />

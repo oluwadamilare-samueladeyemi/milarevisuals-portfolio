@@ -1,7 +1,22 @@
+import { Link } from "react-router-dom";
+import "./CTA.css";
+
 function CTA() {
   return (
-    <section>
-      <h2>Call To Action</h2>
+    <section className="cta">
+
+      <h2>
+        Ready to tell your story?
+      </h2>
+
+      <p>
+        Let's create visuals that leave a lasting impression.
+      </p>
+
+      <Link to="/contact">
+        Book a Session
+      </Link>
+
     </section>
   );
 }
