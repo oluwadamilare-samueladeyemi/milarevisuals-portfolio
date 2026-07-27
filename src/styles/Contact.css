@@ -1,0 +1,18 @@
+.contact-page {
+  width: min(800px, 90%);
+  margin: 60px auto;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  line-height: 1.8;
+}
