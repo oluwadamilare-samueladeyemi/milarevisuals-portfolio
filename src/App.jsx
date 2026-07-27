@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -11,23 +11,19 @@ import ProjectDetails from "./pages/ProjectDetails";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/projects" element={<Projects />} />
-
         <Route path="/projects/:id" element={<ProjectDetails />} />
-
         <Route path="/experience" element={<Experience />} />
-
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 
