@@ -1,5 +1,25 @@
-.error-message {
-  text-align: center;
-  padding: 60px 20px;
-  color: #e63946;
+.error-box{
+
+max-width:600px;
+
+margin:80px auto;
+
+padding:40px;
+
+text-align:center;
+
+border-radius:12px;
+
+border:1px solid crimson;
+
+background:rgba(255,0,0,.08);
+
+}
+
+.error-box h2{
+
+color:crimson;
+
+margin-bottom:20px;
+
 }
