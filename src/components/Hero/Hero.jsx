@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 function Hero() {
@@ -22,11 +23,13 @@ function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button>View Portfolio</button>
+            <Link to="/projects" className="btn">
+              View Portfolio
+            </Link>
 
-            <button className="outline">
+            <Link to="/contact" className="btn outline">
               Book a Session
-            </button>
+            </Link>
           </div>
         </div>
       </div>
