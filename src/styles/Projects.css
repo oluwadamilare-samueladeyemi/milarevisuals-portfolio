@@ -15,3 +15,36 @@
 
   gap: 30px;
 }
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #888;
+  padding: 40px 0;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.projects-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #888;
+  line-height: 1.8;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-size: 1.1rem;
+}
