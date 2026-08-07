@@ -47,25 +47,3 @@
   color: #888;
   font-size: 1.1rem;
 }
-
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 20px;
-  }
-
-  .timeline::before {
-    left: 20px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    margin-left: 0;
-    padding-left: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 15px;
-  }
-}

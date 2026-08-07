@@ -51,8 +51,8 @@ nav a.active {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .navlinks {
-    display: none;
+@media (max-width:600px) {
+  .navlinks{
+    display:none;
   }
 }
