@@ -51,8 +51,12 @@ nav a.active {
   color: #ffffff;
 }
 
+.navlinks{
+    display:flex;
+  }
+
 @media (max-width:600px) {
-  .navlinks{
+  nav{
     display:none;
   }
 }
