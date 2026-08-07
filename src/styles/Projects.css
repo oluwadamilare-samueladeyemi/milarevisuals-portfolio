@@ -10,10 +10,9 @@
 
 .projects-grid {
   display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 2rem;
+  width: 100%;
 }
 
 .no-results {
@@ -47,4 +46,26 @@
   padding: 2rem;
   color: #888;
   font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+  }
 }

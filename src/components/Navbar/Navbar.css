@@ -50,3 +50,9 @@ nav a.active {
 .navbar.dark a {
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .navlinks {
+    display: none;
+  }
+}
